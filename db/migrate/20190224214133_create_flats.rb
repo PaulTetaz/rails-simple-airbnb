@@ -5,7 +5,7 @@ class CreateFlats < ActiveRecord::Migration[5.2]
       t.string :address
       t.text :description
       t.integer :price_per_night
-      t.integer :number_of_guests
+      t.integer :number_of_guest
 
       t.timestamps
     end

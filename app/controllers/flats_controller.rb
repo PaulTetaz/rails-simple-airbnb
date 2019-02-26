@@ -13,6 +13,7 @@ class FlatsController < ApplicationController
   end
 
   def show
+    @falt = Flat.find(params[:id])
   end
 
   def new
@@ -29,6 +30,7 @@ class FlatsController < ApplicationController
   end
 
   def edit
+    @falt = Flat.find(params[:id])
   end
 
   def update
@@ -59,6 +61,6 @@ class FlatsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def flat_params
-    params.require(:flat).permit(:name, :address, :description, :price_per_night, :number_of_guests)
+    params.require(:flat).permit(:name, :address, :description, :price_per_night, :number_of_guest)
   end
 end
